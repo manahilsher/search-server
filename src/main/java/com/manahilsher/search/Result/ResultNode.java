@@ -31,6 +31,7 @@ public class ResultNode {
         if (cache.size() < 5) {
             // If cache isn't yet full, just add this to cache
             cache.add(result.data);
+            cacheChanged = true;
         } else {
             for (int i = 0; i < cache.size(); i++) {
                 // Compare with the node in cache
