@@ -39,8 +39,9 @@ public class ResultController {
      * This is called when the user selects one of the search results.
      * 
      * Atm, the db is updated by adding 1 to the result's frequency count
-     * and updating the cache of all the nodes above it in case this result's
-     * frequency becomes greater than a result that's in the cache.
+     * and updating the cache of all of its parent nodes in case this result's
+     * frequency becomes greater than a result that's in the cache of one of the
+     * parent nodes.
      * 
      * I plan to refactor this to save in redis instead, and save in the db every 30
      * minutes.

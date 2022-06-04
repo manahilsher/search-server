@@ -18,6 +18,12 @@ public class StartupRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         logger.info("ApplicationStartupRunner run method Started !!");
+
+        /*
+         * Build the trie based on what is in the db when the server first starts.
+         * This can be upgraded in the future so that the trie rebuilds itself in case
+         * anything in the db is changed.
+         */
         resultTrie.buildTrie();
     }
 }
